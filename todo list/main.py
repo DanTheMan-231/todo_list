@@ -70,3 +70,6 @@ while True:
 
 print("Bye!")
 print("Another line to say goodbye.")
+
+def function():
+    pass
