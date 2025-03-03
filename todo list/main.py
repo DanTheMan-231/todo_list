@@ -68,8 +68,7 @@ while True:
     #else:
         #print("This command is not valid.")
 
-print("Bye!")
-print("Another line to say goodbye.")
+print("Cheers!")
 
 def function():
     pass
