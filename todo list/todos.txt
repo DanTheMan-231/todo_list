@@ -4,3 +4,5 @@ pet dorf.
 Finish this chapter before work.
 keep coding , your doing it !
 pet dorf
+make a gui
+learn git
