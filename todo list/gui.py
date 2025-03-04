@@ -22,6 +22,12 @@ while True:
         new_todo = values['todo']+ '\n'
         todos.append(new_todo) 
         functions.write_data(todos)
+    
+    elif event == "Edit":
+        todo = values['todos']
+        print(todo)
+
+    
     elif event == sg.WIN_CLOSED:
         break
 
