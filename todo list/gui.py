@@ -15,19 +15,28 @@ window = sg.Window("My To-Do App",
 
 while True:
     event , values = window.read() 
-    print(event)
-    print(values)
+    print(1, event)
+    print(2, values)
+    print(3, values['todos'])
     if event == 'Add':
         todos = functions.open_file()
         new_todo = values['todo']+ '\n'
         todos.append(new_todo) 
         functions.write_data(todos)
+        window['todos'].update(values=todos)
     
     elif event == "Edit":
-        todo = values['todos']
-        print(todo)
+        todo_to_edit = values['todos'][0]
+        new_todo = values['todo']
+        
+        todos = functions.open_file()
+        index = todos.index(todo_to_edit)
+        todos[index] = new_todo
+        functions.write_data(todos)
+        window['todos'].update(values=todos)
+    elif event == 'todos':
+        window['todo'].update(value=values['todos'][0])
 
-    
     elif event == sg.WIN_CLOSED:
         break
 
