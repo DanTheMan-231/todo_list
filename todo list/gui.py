@@ -38,21 +38,24 @@ while True:
         if  new_todo.strip() == "" or new_todo.strip() == "\n":
             sg.popup("Please enter a todo to add.", font=("Helvetica", 12))
 
+        elif new_todo in todos:
+            sg.popup(f"{new_todo}\nis already on todo list.", font=("Helvetica", 12))
+
         else:    
             todos.append(new_todo + '\n')# B2 Ensure we only store clean todos.
             functions.write_data(todos)
             window['todos'].update(values=todos)
+            window["todo"].update(value="")  # B3 - Clear input box
     
     elif event == "Edit":
         try:
             todo_to_edit = values['todos'][0]
             new_todo = values['todo']
-            
             index = todos.index(todo_to_edit)
             todos[index] = new_todo
             functions.write_data(todos)
             window['todos'].update(values=todos)
-            window["todo"].update(value="")  # B3 - Clear input box
+            window["todo"].update(value="")  # B4 - Clear input box
         except IndexError:
                 sg.popup("Please select a todo to edit.", font=("Helvetica", 12))
             

@@ -9,3 +9,4 @@ learn git
 check if this works
 figure this out
 push to git repository.
+write a commit to git.
