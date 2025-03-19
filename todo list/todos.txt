@@ -1,9 +1,8 @@
-do some more python ..
+do some more python...
 gym again
 pet dorf.
 Finish this chapter before work.
-keep coding , your doing it !
-pet dorf
+pet dorf.
 make a gui
 learn git
 check if this works
